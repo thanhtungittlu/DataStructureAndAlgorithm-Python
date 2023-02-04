@@ -101,9 +101,9 @@ class LinkedList:
             print("index out of range linked list")
             return False
         if index == 0:
-            self.prepend(value)
+            return self.prepend(value)
         if index == self.length - 1:
-            self.append(value)
+            return self.append(value)
         
         nodeInsert = Node(value)
         oldNodeBefore = self.get(index-1)
@@ -165,7 +165,7 @@ print("Head: ", myLinkedList.head.value)
 print("Tail: ", myLinkedList.tail.value)
 print("Leng: ", myLinkedList.length)
 print("-----")
-myLinkedList.reverse()
+myLinkedList.removeByIndex(4)
 myLinkedList.printList()
 print("-----")
 print("Head: ", myLinkedList.head.value)
